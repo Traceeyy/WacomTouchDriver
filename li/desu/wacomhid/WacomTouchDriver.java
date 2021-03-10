@@ -82,10 +82,10 @@ public class WacomTouchDriver {
 				int rawPosY = raw[5];
 				
 				if(rawPosX < 0) {
-					rawPosX = rawPosX + 256;
+					rawPosX += 256;
 				}
 				if(rawPosY < 0) {
-					rawPosY = rawPosY + 256;
+					rawPosY += 256;
 				}
 				
 				int x = (int) (width / 255.000000000000000 * rawPosX);
